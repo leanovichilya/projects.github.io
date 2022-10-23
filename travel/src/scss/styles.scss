@@ -1,4 +1,4 @@
-//@import "base/_fonts";
+@import "base/_fonts";
 @import "base/_variables";
 @import "base/_functions";
 @import "base/_null";
@@ -15,4 +15,12 @@ body {
 
 .wrapper {
 
+}
+
+.mobile {
+  display: none;
+
+  //@media screen and (max-width: 391px) {
+  //  display: block;
+  //}
 }
