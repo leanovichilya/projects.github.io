@@ -1,7 +1,0 @@
-mixin nav(blockName, className, items)
-    ul(class=`navigation ${blockName}__${className} ${className} ${className}__list`)
-      each key in items
-          li(class=`${className}__item${key.class}`)
-              a(
-                  class=`${key.title === 'Login' ? 'btn ' : ''}${className}__link`
-                  href=key.link)= key.title
