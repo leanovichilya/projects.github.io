@@ -4,23 +4,74 @@
 @import "base/_null";
 @import "base/_mixins";
 @import "base/_hidden";
+//@import "modules/swiper";
 
 html {
-
+  --main-color: #ffffff;
+  --text-color: #0D606F;
+  --title--color: #F2785C;
 }
 
 body {
-
+  min-width: $minWidth + px;
+  font: {
+    family: $fontFamily;
+    size: pxToRem(16);
+    weight: 400;
+  }
 }
 
-.wrapper {
+.container {
+  margin: 0 auto;
+  max-width: $maxWidthContainer;
+  @include paddingLeftRight(16px, 16px);
+}
 
+
+.btn {
+  border-radius: 10px;
+  background-color: var(--text-color);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25),
+  0 2px 3px rgba(13, 96, 111, 0.16);
+}
+
+.header__wrapper {
+  background-image: url('@img/bg-header.jpg');
+  @include bgImage(no-repeat, 0, 0, cover);
+}
+
+.footer__wrapper{
+  background-image: url('@img/bg-footer.jpg');
+  @include bgImage(no-repeat, 0, 0, cover);
+}
+
+.desktop {
+  display: block;
+
+  @media screen and (max-width: 671px){
+    display: none;
+  }
 }
 
 .mobile {
   display: none;
 
-  //@media screen and (max-width: 391px) {
-  //  display: block;
-  //}
+  @media screen and (max-width: 671px){
+    display: block;
+  }
 }
+
+@import "includes/01-header";
+@import "components/logo";
+@import "components/navigation";
+@import "components/burger-menu";
+@import "includes/02-preview";
+@import "components/form-preview";
+@import "includes/03-steps";
+@import "components/cards";
+@import "includes/04-destinations";
+@import "components/slider";
+@import "includes/05-stories";
+@import "components/travel-stories";
+@import "includes/06-footer";
+@import "components/socials";

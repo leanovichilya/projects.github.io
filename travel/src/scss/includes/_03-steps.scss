@@ -1,0 +1,13 @@
+.steps {
+  &__container {
+    @include paddingTopBottom(80px, 97px);
+  }
+
+  &__title {
+    @include h2title;
+  }
+
+  &__cards {
+    margin-top: 40px;
+  }
+}

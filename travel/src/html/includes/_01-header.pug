@@ -1,2 +1,13 @@
+include ../components/_nav
+
 header.header
     .container.header__container
+        a.header__logo.logo
+            h1.logo__title= h1Title
+        .navigation__wrapper.burger__menu-hidden
+            button.burger__menu-close(type='button')
+            nav.header__navigation
+                +nav('header', 'navigation-main', mainNavigation)
+            +nav('header', 'navigation-authorization', authorizationList)
+            +nav('header', 'navigation-contacts', contacts)
+        button(type='button').burger__menu

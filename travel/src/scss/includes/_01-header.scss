@@ -1,0 +1,24 @@
+.header {
+  @include paddingTopBottom(25px, 24px);
+  color: var(--main-color);
+  background-color: rgba(#F2785C, 0.7);
+  box-shadow: 0 4px 4px rgba(13, 96, 111, 0.5);
+
+  @media screen and (max-width: 671px){
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    column-gap: 10px;
+    justify-content: space-between;
+  }
+
+  &__navigation{
+    margin: 0 auto;
+  }
+}
