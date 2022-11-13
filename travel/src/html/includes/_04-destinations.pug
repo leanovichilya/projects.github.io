@@ -1,0 +1,7 @@
+include ../components/_slider
+
+section.destinations
+    .destinations__container
+        h2.destinations__title= destinationsTitle
+        +slider('destinations', 'swiper', destinationsSlider)
+        a.btn.destinations__button(href='#')= destinationsButton

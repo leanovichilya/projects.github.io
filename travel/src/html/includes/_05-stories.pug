@@ -1,0 +1,7 @@
+include ../components/_stories
+
+section.stories
+    .container.stories__container
+        h2.stories__title= storiesTitle
+        +stories('stories', 'travel-stories', storiesList)
+        a.btn.stories__btn(href='#')= storiesButton

@@ -1,0 +1,15 @@
+include _pictures
+- minWidth = 870
+- maxWidth = 871
+
+
+mixin stories(blockName, className, items)
+    ul(class=`${blockName}__${className} ${className} ${className}__list`)
+      each item in items
+          li(class=`${className}__item`)
+              +picture(className, pathStories, pathStoriesMobile, item.link, item.name)
+              div(class=`${className}__wrapper`)
+                  h3(class=`${className}__title`)= item.title
+                  p(class=`${className}__text`)= item.text
+                  |
+                  a(class=`${className}__btn` href=item.link) Read more

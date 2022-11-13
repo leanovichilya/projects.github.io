@@ -1,0 +1,35 @@
+.stories {
+  background-color: rgba(#fff, 0.7);
+
+  &__container {
+    @include paddingTopBottom(80px, 41px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 40px;
+  }
+
+  &__title {
+    @include h2title;
+  }
+
+  &__btn {
+    display: flex;
+    padding: 9.5px 31px;
+    @include paddingTopBottom(7.5px, 7.5px);
+    color: var(--main-color);
+    font-size: pxToRem(24);
+    line-height: lhToSize(32, 24);
+    font-family: 'RedHatText', 'sans-serif';
+    font-weight: 500;
+    column-gap: 10px;
+
+    &:before{
+      content: '';
+      width: 31px;
+      height: 22.5px;
+      background-image: url(pathIcon('arrow'));
+      @include bgImage(no-repeat, 0, 0, 100%);
+    }
+  }
+}

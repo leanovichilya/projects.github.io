@@ -1,0 +1,7 @@
+mixin cards(blockName, className, items)
+    ul(class=`${blockName}__${className} ${className} ${className}-list`)
+      each iconName, text in items
+          li(class=`${className}__item`)
+              div(class=`${className}__icon-wrapper`)
+                  span(class=`${className}__icon ${iconName}`)
+              p(class=`${className}__text`)= text
